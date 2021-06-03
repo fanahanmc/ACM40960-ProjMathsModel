@@ -82,7 +82,8 @@ head(EPL)
 EPL$HomePPC[370:390]
 
 # boxplot of difference in % total points between home and away teams, separated by result
-boxplot((EPL$HomePPC-EPL$AwayPPC)~EPL$FTR)
+boxplot((EPL$HomePPC-EPL$AwayPPC)~EPL$FTR, main="", 
+        xlab="Result", ylab="Difference in Proportion of Total Points (Home vs Away)")
 
 # print list of all final standings tables for the past 10 seasons
 teams_WLD_list
@@ -130,7 +131,7 @@ table(pred_train, df_train$FTR)
 class_acc(pred_test, df_test$FTR)
 table(pred_test, df_test$FTR)
 
-pred_prob
+pred_prob[1:10,]
 
 # predict probabilities for all fixtures
 pred_prob_all <- predict(fit_rf, newdata=df, type="prob")
@@ -238,7 +239,7 @@ for (season in 1:num_seasons) {
 }
 
 
-test <- WLD_prog_list2[[9]]
+test <- WLD_prog_list2[[10]]
 ptsfinal<-test[,38]
 # for(val in ptsfinal) {
 #   w <- sum(ptsfinal==val)
@@ -250,17 +251,26 @@ ptsfinal<-test[,38]
 #   }
 # }
 
-matplot(t(test), type="l", lty=1, lwd=2, col=adjustcolor(1:20,0.5),
+matplot(t(test), type="l", lty=1, lwd=2, col=adjustcolor(1:20,0.5), xlim=c(1,40),
         ylab = "Cumulative Points", xlab = "Game Week", main="Progression of Total Points")
-text(38, ptsfinal, rownames(test), cex=0.4)
+text(40, ptsfinal, rownames(test), cex=0.4)
 
 # use rank method to determine position of each team after each game
 # plot progression of league position of each team
 posprog <- apply(-test, 2, rank, ties.method="min")
 posfinal <- posprog[,38]
-matplot(t(posprog), type="l", lty=1, ylim = c(20,1), lwd=2, col=adjustcolor(1:20,0.2),
-        ylab = "League Position", xlab = "Game Week", main="Progression of League Position")
-abline(v=0:38, h=1:20, lty=3, col=adjustcolor("grey", 0.3))
+
+# plot league position of each club vs game week
+matplot(t(posprog), type="l", lty=rep(c(2,1,3), 8), ylim = c(20,1), lwd=3, col=adjustcolor(1:20,0.9), xlim=c(1,46), xaxt="n", yaxt="n",
+        ylab = "League Position", xlab = "Game Week", main="Progression of League Position", bty="n")
+# plot x and y axis ticks
+axis(1, seq(2,38,2), cex.axis=0.7)
+axis(2, 1:20, cex.axis=0.7, las=2)
+abline(v=1:38, h=1:20, lty=3, col=adjustcolor("grey", 0.5))
+# add legend with teams lined up beside final position
+for (i in 1:20) legend(x=39, y=i, yjust = 0.5, rownames(test)[i], lty=rep(c(2,1,3), 8)[i], 
+                       col=adjustcolor(i,0.9), lwd=3, bty="n")
+
 
 for(val in posfinal) {
   w <- sum(posfinal==val)
@@ -272,6 +282,63 @@ for(val in posfinal) {
   }
 }
 text(38, posfinal, rownames(test), cex=0.4)
+
+
+
+# Simulating random generation of 3 random probabilities than sum to 1
+#
+N=100000
+
+r1 <- rep(0,N)
+r2 <- rep(0,N)
+r3 <- rep(0,N)
+for (i in 1:N) {
+  rand123 <- rbeta(3,20,20)#runif(3)
+  rand123 <- rand123/sum(rand123)
+  r1[i] <- rand123[1]
+  r2[i] <- rand123[2]
+  r3[i] <- rand123[3]
+}
+par(mfrow=c(3,1))
+h1=hist(r1, breaks = 1000, freq = F)
+h2=hist(r2, breaks = 1000, freq = F)
+h3=hist(r3, breaks = 1000, freq = F)
+h1$mids[h1$counts==max(h1$counts)]
+h2$mids[h2$counts==max(h2$counts)]
+h3$mids[h3$counts==max(h3$counts)]
+
+
+
+
+# use skellam distribution to calculate probability of a Poisson distributed variable (Y1)
+# being less than/greater than/equal to a second Poisson distributed variable (Y2)
+library(skellam)
+
+# set expected number of home and awau goals (lambdas for Poisson variables)
+HomeExGoals <- 2.3
+AwayExGoals <- 2.5
+
+# Probability of home win -> P(Y1 > Y2)
+P_HomeWin <- pskellam(.1, HomeExGoals , AwayExGoals, lower.tail = F)
+# Probability of home win -> P(Y1 < Y2)
+P_AwayWin <- pskellam(-.1, HomeExGoals , AwayExGoals)
+# Probability of draw -> P(Y1 = Y2)
+P_Draw <- dskellam(0, HomeExGoals , AwayExGoals)
+
+P_HomeWin
+P_AwayWin 
+P_Draw
+# should sum to 1
+P_HomeWin+P_AwayWin+P_Draw
+
+testt <- cbind(rpois(10000, HomeExGoals), rpois(10000, AwayExGoals))
+
+sum(testt[,1]>testt[,2])/nrow(testt)
+sum(testt[,1]<testt[,2])/nrow(testt)
+sum(testt[,1]==testt[,2])/nrow(testt)
+
+
+
 
 ##########################
 # Project Notes / Ideas: #
@@ -293,6 +360,22 @@ text(38, posfinal, rownames(test), cex=0.4)
 #   if bets are biased towards a particular outcome by a particular amount then betting odds could be readjusted,
 #   and the proportion of bets probabilities could also potentially be readjusted (people less likely to bet on
 #   an outcome if the odds decrease).
+
+N=1000000
+r1 <- rep(0,N)
+r2 <- rep(0,N)
+r3 <- rep(0,N)
+for (i in 1:N) {
+  a <- runif(1)
+  b <- runif(1)
+  r1[i] <- min(a,b)
+  r2[i] <- abs(a-b)
+  r3[i] <- 1-max(a,b)
+}
+par(mfrow=c(3,1))
+hist(r1, breaks = 100)
+hist(r2, breaks = 100)
+hist(r3, breaks = 100)
 
 
 
