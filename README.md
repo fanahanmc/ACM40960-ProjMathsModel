@@ -12,4 +12,4 @@ This project has been programmed using Python within a Jupyter Notebook. These n
 If you haven't used Jupyter Notebooks before, then first download and install *Anaconda*, the latest version of which can be downloaded from the following link: https://www.anaconda.com/products/individual. 
 After completing the installation, open *Anaconda-Navigator* and select *Launch* on the *JupyterLab* pane (see image below).
 
-<p align="center"><img width=12.5% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/master/Images/AnacondaNavImg.png"></p>
+<p align="center"><img width=12.5% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/AnacondaNavImg.png"></p>
