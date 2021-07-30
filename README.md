@@ -1,7 +1,7 @@
 # ACM40960 Projects in Maths Modelling - UCD Summer Term 2021
 
 # Monte Carlo Simulation of Fixtures and Betting Systems for the English Premier League
-Created by Fanahan McSweeney (Student Number: 20203868)
+***Created by Fanahan McSweeney (Student Number: 20203868)***
 
 ## Overview
 
