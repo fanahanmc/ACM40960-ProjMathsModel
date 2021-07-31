@@ -42,3 +42,8 @@ The notebook also utilises a number of functions from one external package (***m
 pip install mord
 ```
 Alternatively, you can execute this command in a code block within the notebook itself (the command is currently included in the first code block of the notebook).
+
+$\color{red}{\textbf{
+WARNING! Running the following cell may take a very long time (several hours)...
+Do not execute if you are not prepared to wait!!!
+}}$
