@@ -25,5 +25,6 @@ Then open a terminal window on your local machine and navigate to the location w
 ```bash
 git clone PASTE-REPOSITORY-URL-HERE
 ```
-Finally, return to the *JupyterLab* window launched previously, click on the folder icon in the top left corner of the window, and navigate to the newly created project folder. Then double-click on the *ACM40960_Project_20203868.ipynb* file located in this folder to open the Jupyter Notebook.
+Finally, return to the *JupyterLab* window launched previously, click on the folder icon in the top left corner of the window, and navigate to the newly created project folder. Then double-click on the *ACM40960_Project_20203868.ipynb* file located in this folder to open the Jupyter Notebook (highlighted in the folder navigation pane in the image below).
 
+<p align="center"><img width=20.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/JupyterLabFolderTree.png"></p>
