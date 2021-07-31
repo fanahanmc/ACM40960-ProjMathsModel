@@ -28,3 +28,8 @@ git clone PASTE-REPOSITORY-URL-HERE
 Finally, return to the *JupyterLab* window launched previously, click on the folder icon in the top left corner of the window, and navigate to the newly created project folder. Then double-click on the *ACM40960_Project_20203868.ipynb* file located in this folder to open the Jupyter Notebook (highlighted in the folder navigation pane in the image below).
 
 <p align="center"><img width=40.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/JupyterLabFolderTree.png"></p>
+
+## Navigating the Jupyter Notebook
+
+Now that you have opened the Jupyter Notebook for this project, you can proceed down through the notebook ```bash Shift+Enter```
+A useful reference detailing many of the useful shorcuts that can be used when navigating a Jupyter Notebook can be found [here](https://towardsdatascience.com/jypyter-notebook-shortcuts-bf0101a98330)
