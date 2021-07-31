@@ -43,8 +43,9 @@ pip install mord
 ```
 Alternatively, you can execute this command in a code block within the notebook itself (the command is currently included in the first code block of the notebook).
 
-Also note that some of the code cells in this notebook take a relatively long time to execute. In each case these cells will be preceeded with a red warning message, similar to below.
+Also note that some of the code cells in this notebook take a relatively long time to execute. In each case these cells will be preceded with a red warning message, similar to below.
 ```diff
 -WARNING! Running the following cell may take a very long time (several hours)...
 -Do not execute if you are not prepared to wait!!!
 ```
+Only run these cells in their current configuration if you are prepared to wait the long execution time. If not, but you would still like to test the functionality of the code in the cell, then follow the guidance of the accompanying message written below the warning (also written in red text) which will suggest a modification that can be made to the cell to reduce execution time (e.g. run code for a reduced number of iterations).
