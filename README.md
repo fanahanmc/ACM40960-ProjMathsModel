@@ -33,7 +33,7 @@ Finally, return to the *JupyterLab* window launched previously, click on the fol
 
 ## Navigating the Jupyter Notebook
 
-#### Executing code cells
+### Executing code cells
 
 Now that you have opened the Jupyter Notebook for this project, you can proceed down through the notebook executing each code block sequentially. As some of the code blocks have a relatively long execution time, I recommend executing the blocks one-by-one, rather than immediately executing the entire notebook. 
 
@@ -41,7 +41,7 @@ Now that you have opened the Jupyter Notebook for this project, you can proceed 
 
 To execute a code block, ensure it is selected by clicking on the space on the left hand side of the block (A narrow blue bar will be displayed next to the block when it is selected) and press ```Shift + Return``` to execute. A useful reference detailing many of the most commonly used shorcuts for navigating Jupyter Notebooks can be found [here](https://towardsdatascience.com/jypyter-notebook-shortcuts-bf0101a98330)
 
-#### Installing external packages
+### Installing external packages
 
 The notebook also utilises a number of functions from one external package (***mord***) that needs to be installed before these functions can be used. You can install this package from a terminal window using the following command:
 ```bash
@@ -49,7 +49,7 @@ pip install mord
 ```
 Alternatively, you can execute this command in a code block within the notebook itself (the command is currently included in the first code block of the notebook).
 
-#### Long-running code cells
+### Long-running code cells
 
 Also note that some of the code cells in this notebook take a relatively long time to execute. In each case these cells will be preceded with a red warning message, similar to below.
 ```diff
