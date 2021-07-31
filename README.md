@@ -7,7 +7,7 @@
 
 The main aim of this project is to model the dynamics of the English Premier League and simulate multiple seasons of fixtures based on this model, as well as simulating and evaluating the profitability of different forms of betting systems that could be employed by bookmakers during the Premier League season.
 
-The Python programming language has been used for the project within a Jupyter Notebook. These notebooks allow users to seamlessly blend multiple blocks of code and text within a single document that is easy to navigate. You can run these notebooks using an appropriate IDE/UI, such as *Jupyter Notebook* or (preferably) *JupyterLab*.
+The project has been completed within a Jupyter Notebook using the Python programming language. These notebooks allow users to seamlessly blend multiple blocks of code and text within a single easy to navigate document. You can run these notebooks using an appropriate IDE/UI, such as *Jupyter Notebook* or (preferably) *JupyterLab*.
 
 The main project notebook included in this repository (***CM40960_Project_20203868.ipynb***) has already been executed in full, with all relevant plots, figures and results already visible. Therefore, the fully executed file can be viewed by clicking on the file name directly on GitHub. Alternatively, if you would like to access a copy of the notebook and execute it yourself, then proceed to the **Getting Started** section below.
 
@@ -57,3 +57,11 @@ Also note that some of the code cells in this notebook take a relatively long ti
 -Do not execute if you are not prepared to wait!!!
 ```
 Only run these cells in their current configuration if you are prepared to wait the long execution time. If not, but you would still like to test the functionality of the code in the cell, then follow the guidance of the accompanying message written below the warning (also written in red text) which will suggest a modification that can be made to the cell to reduce execution time (e.g. run code for a reduced number of iterations).
+
+### Collapsible headings (optional step)
+
+As the Jupyter Notebook for this project is relatively long, I have divided it into several sections and sub-sections, each identified with an appropriate heading. A number of different packages are available that can be used to collapse each of these individual sections making the the notebook easier to read and to navigate. The *aquirdturtle_collapsible_headings* package can be installed to implement this functionality, allowing individual sections to be collapsed by clicking on their associated heading. If you would like to add this functionality to *JupyterLab*, run the following command from a terminal window. 
+
+```bash
+pip install aquirdturtle_collapsible_headings
+```
