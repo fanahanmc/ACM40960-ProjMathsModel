@@ -31,5 +31,8 @@ Finally, return to the *JupyterLab* window launched previously, click on the fol
 
 ## Navigating the Jupyter Notebook
 
-Now that you have opened the Jupyter Notebook for this project, you can proceed down through the notebook ```bash Shift+Enter```
-A useful reference detailing many of the useful shorcuts that can be used when navigating a Jupyter Notebook can be found [here](https://towardsdatascience.com/jypyter-notebook-shortcuts-bf0101a98330)
+Now that you have opened the Jupyter Notebook for this project, you can proceed down through the notebook executing each code block sequentially. As some of the code blocks have a relatively long execution time, I recommend executing the blocks one-by-one, rather than immediately executing the entire notebook. 
+
+***Note: Failure to execute the code blocks in chronological order may result in errors or incorrect results***. 
+
+To execute a code block, ensure it is selected by clicking on the space on the left hand side of the block (A narrow blue bar will be displayed next to the block when it is selected) and press ```Shift + Return``` to execute. A useful reference detailing many of the useful shorcuts that can be used when navigating a Jupyter Notebook can be found [here](https://towardsdatascience.com/jypyter-notebook-shortcuts-bf0101a98330)
