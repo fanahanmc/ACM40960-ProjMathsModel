@@ -45,5 +45,6 @@ Alternatively, you can execute this command in a code block within the notebook 
 
 Also note that some of the code cells in this notebook take a relatively long time to execute. In each case these cells will be preceeded with a red warning message, similar to below.
 ```diff
--Warning
+-WARNING! Running the following cell may take a very long time (several hours)...
+Do not execute if you are not prepared to wait!!!
 ```
