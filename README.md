@@ -36,3 +36,9 @@ Now that you have opened the Jupyter Notebook for this project, you can proceed 
 ***Note: Failure to execute the code blocks in chronological order may result in errors or incorrect results***. 
 
 To execute a code block, ensure it is selected by clicking on the space on the left hand side of the block (A narrow blue bar will be displayed next to the block when it is selected) and press ```Shift + Return``` to execute. A useful reference detailing many of the useful shorcuts that can be used when navigating a Jupyter Notebook can be found [here](https://towardsdatascience.com/jypyter-notebook-shortcuts-bf0101a98330)
+
+The notebook also utilises a number of functions from one external package (***mord***) that needs to be installed before these functions can be used. You can install this package from a terminal window using the following command:
+```bash
+pip install mord
+```
+Alternatively, you can execute this command in a code block within the notebook itself (the command is currently included in the first code block of the notebook).
