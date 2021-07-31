@@ -19,7 +19,9 @@ Next, you can clone this GitHub repository onto your local machine. On GitHub, n
 
 <p align="center"><img width=70.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/GithubRepo.png"></p>
 
-Then open a terminal window on your local machine, and navigate to the location where you want to save the repository. Then enter the following command:
+Then open a terminal window on your local machine, and navigate to the location where you want to save the repository. Then type *git clone* and paste the URL copied earlier, and enter the command:
 ```bash
-git clone "*paste repo link here*"
+git clone COPIED-REPOSITORY-URL
 ```
+
+
