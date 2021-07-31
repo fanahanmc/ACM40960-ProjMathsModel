@@ -5,7 +5,9 @@
 
 ## Overview
 
-This project has been programmed using Python within a Jupyter Notebook. These notebooks allow users to seamlessly blend multiple blocks of code and text within a single document that is easy to navigate. You can run these notebooks using an appropriate IDE/UI, such as *Jupyter Notebook* or (preferably) *JupyterLab*.
+The main aim of this project is to model the dynamics of the English Premier League and simulate multiple seasons of fixtures based on this model, as well as simulating and evaluating the profitability of different forms of betting systems that could be employed by bookmakers during the Premier League season.
+
+The Python programming language has been used for the project within a Jupyter Notebook. These notebooks allow users to seamlessly blend multiple blocks of code and text within a single document that is easy to navigate. You can run these notebooks using an appropriate IDE/UI, such as *Jupyter Notebook* or (preferably) *JupyterLab*.
 
 The main project notebook included in this repository (***CM40960_Project_20203868.ipynb***) has already been executed in full, with all relevant plots, figures and results already visible. Therefore, the fully executed file can be viewed by clicking on the file name directly on GitHub. Alternatively, if you would like to access a copy of the notebook and execute it yourself, then proceed to the **Getting Started** section below.
 
