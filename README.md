@@ -19,7 +19,7 @@ After completing the installation, open *Anaconda-Navigator* and select *Launch*
 
 Next, you can clone this GitHub repository onto your local machine. On GitHub, navigate to the repository (you should already be here if you're reading this README file...), select the green *Code* button, and then select the clipboard button beside the link to copy the repo link (highligthed in the image below).
 
-<p align="center"><img width=70.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/GithubRepo.png"></p>
+<p align="center"><img width=80.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/GithubRepo.png"></p>
 
 Then open a terminal window on your local machine and navigate to the location where you want to save the repository. Then type *git clone* and paste the URL copied earlier, and enter the command.
 ```bash
@@ -27,4 +27,4 @@ git clone PASTE-REPOSITORY-URL-HERE
 ```
 Finally, return to the *JupyterLab* window launched previously, click on the folder icon in the top left corner of the window, and navigate to the newly created project folder. Then double-click on the *ACM40960_Project_20203868.ipynb* file located in this folder to open the Jupyter Notebook (highlighted in the folder navigation pane in the image below).
 
-<p align="center"><img width=20.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/JupyterLabFolderTree.png"></p>
+<p align="center"><img width=40.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/JupyterLabFolderTree.png"></p>
