@@ -9,8 +9,17 @@ This project has been programmed using Python within a Jupyter Notebook. These n
 
 ## Getting Started
 
-If you haven't used Jupyter Notebooks before, then first download and install *Anaconda*, the latest version of which can be downloaded [here](https://www.anaconda.com/products/individual).
+If you haven't used Jupyter Notebooks before, then first download and install *Anaconda*, the latest version of which [can be downloaded from here](https://www.anaconda.com/products/individual).
 
 After completing the installation, open *Anaconda-Navigator* and select *Launch* on the *JupyterLab* pane (highligthed in the image below).
 
 <p align="center"><img width=80.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/AnacondaNavImg.png"></p>
+
+Next, you can clone this GitHub repository onto your local machine. On GitHub, navigate to the repository (you should already be here if you're reading this README file...), select the green *Code* button, and then select the clipboard button beside the link to copy the repo link (highligthed in the image below).
+
+<p align="center"><img width=70.0% src="https://github.com/fanahanmc/ACM40960-ProjMathsModel/blob/main/Images/GithubRepo.png"></p>
+
+Then open a terminal window on your local machine, and navigate to the location where you want to save the repository. Then enter the following command:
+```bash
+git clone "*paste repo link here*"
+```
